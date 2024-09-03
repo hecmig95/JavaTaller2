@@ -17,4 +17,9 @@ public class ViewLog {
     String logValue;
     String operation;
     LocalDate logDate;
+
+    public ViewLog(long l, String s, String error) {
+    }
+
+
 }

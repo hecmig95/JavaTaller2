@@ -16,4 +16,11 @@ public class Product {
     String productName;
     Double productPrice;
     Integer status;
+
+    public Product(long l, String s, int i, double v) {
+    }
+
+    public Product() {
+
+    }
 }

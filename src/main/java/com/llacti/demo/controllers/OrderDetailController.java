@@ -16,11 +16,13 @@ import java.util.List;
 public class OrderDetailController {
     @Autowired
     OrderDetailRepository orderDetailRepository;
+    //Endpoint6.0
     @GetMapping("/orderDetails")
     public List<OrderDetail> getOrderDetail() {
         return  orderDetailRepository.findAll();
     }
 
+    //Endpoint7.1
     @GetMapping("/orderDetailsWithStoreProcedure")
     public List<OrderDetail> getOrderDetailWithStoreProcedure(@RequestParam Long id) {
         return orderDetailRepository.findOrderDetailsByOrderId(id);

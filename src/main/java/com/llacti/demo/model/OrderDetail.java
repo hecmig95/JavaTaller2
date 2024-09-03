@@ -15,4 +15,10 @@ public class OrderDetail {
     @Id
     Long productId;
 
+    public OrderDetail(long l, long l1, String productA, int i) {
+    }
+
+    public OrderDetail() {
+
+    }
 }

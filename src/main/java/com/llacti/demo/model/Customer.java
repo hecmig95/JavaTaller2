@@ -17,4 +17,11 @@ public class Customer {
     private Long customerId;
     String customerName;
     String customerAddress;
+
+    public Customer(long l, String johnDoe, String s) {
+    }
+
+    public Customer() {
+
+    }
 }

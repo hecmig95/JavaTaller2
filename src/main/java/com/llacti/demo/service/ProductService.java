@@ -18,4 +18,12 @@ public class ProductService {
         System.out.println(productRepository.getMaxId());
         return productRepository.save(product);
     }
+
+    public Object getProductsByCriteria(String product, int i) {
+        return null;
+    }
+
+    public Object getProductById(long l) {
+        return null;
+    }
 }

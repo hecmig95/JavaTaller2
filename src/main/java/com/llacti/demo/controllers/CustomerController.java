@@ -14,6 +14,8 @@ public class CustomerController {
     CustomerRepository customerRepository;
     @Autowired
     CustomerService customerService;
+
+    //Endpoint4
     @GetMapping("/customers")
     public List<Customer> getCustomers(
             @RequestParam(defaultValue = "0") int page,
@@ -21,11 +23,13 @@ public class CustomerController {
 
         return customerService.getCustomers(page,size);
     }
+    //Endpoint5.1
     @GetMapping("/customers/{customerId}")
     public Customer getCustomerById(@PathVariable Long customerId) {
         return customerRepository.findById(customerId).get();
     }
 
+    //Endpoint5.2
     @PostMapping("/customer")
     public Customer createOrUpdateProduct(@RequestBody Customer customer) {
         if (customer.getCustomerId() != null && customerRepository.existsById(customer.getCustomerId())) {

@@ -14,17 +14,20 @@ public class ProductController {
     ProductService productService;
     @Autowired
     ProductRepository productRepository;
+    //Endpoint 1
     @GetMapping("/products")
     public List<Product> getProducts(
             @RequestParam(value = "productName", required = false) String productName,
             @RequestParam(value = "status", required = false) Integer status) {
         return productRepository.findByProductNameAndStatus(productName, status);
     }
+    //Endpoint2
     @GetMapping("/products/{productId}")
     public Product getProductById(@PathVariable Long productId) {
         return productRepository.findById(productId).get();
     }
 
+    //Endpoint3
     @PostMapping("/product")
     public Product createOrUpdateProduct(@RequestBody Product product) {
         // Si el producto tiene un ID, se considera una actualización

@@ -13,6 +13,7 @@ public class LogController {
     @Autowired
     ViewLogRepository viewLogRepository;
 
+    //Endpoint7.2
     @GetMapping("/logs")
     public List<ViewLog> getLogs() {
         return viewLogRepository.findAll();
