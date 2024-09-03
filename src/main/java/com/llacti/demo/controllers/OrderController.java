@@ -15,6 +15,7 @@ import java.util.List;
 public class OrderController {
     @Autowired
     OrderService orderService;
+    //Endpoint6.1
     @GetMapping("/orders")
     public List<Order> getOrderDetail(@RequestParam(defaultValue = "0") int page,
                                       @RequestParam(defaultValue = "20") int size) {
